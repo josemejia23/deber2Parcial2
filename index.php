@@ -103,10 +103,10 @@ if (isset($_POST["accion"]) && ($_POST["accion"] == "Agregar")) {
             <div style="text-align: center; margin-left:-200px">
 
 
-                <table border="1" class="table" style=" font-family: Arial; width:1000px" align="center">
+                <table border="1" class="table" style=" font-family: Arial; width:1000px; " align="center">
 
-                    <thead class="" style="background-color:#17a2b8">
-                       
+                    <thead class="" style="background-color:#17a2b8; color:white">
+
                         <tr>
                             <th scope="col">Código</th>
                             <th scope="col">Nombre</th>
@@ -114,7 +114,7 @@ if (isset($_POST["accion"]) && ($_POST["accion"] == "Agregar")) {
                             <th scope="col">Precio</th>
                             <th scope="col">Peso</th>
                             <th scope="col">Fecha de caducidad</th>
-                            <th scope="col">ELIMINAR</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <?php
@@ -135,7 +135,7 @@ if (isset($_POST["accion"]) && ($_POST["accion"] == "Agregar")) {
                                             ELIMINAR
                                             <input type="radio" id="eliminar" name="eliCodigo" value="<?php echo $row["cod_producto"]; ?>">
                                         </button></td>
-                                    
+
                                 </tr>
                             </tbody>
                         <?php
@@ -150,11 +150,8 @@ if (isset($_POST["accion"]) && ($_POST["accion"] == "Agregar")) {
             </div>
 
 
-
-            <!-- Default form contact -->
-
             <input type="hidden" name="codProducto" value="<?php echo $codProducto; ?>">
-<br><br><br>
+            <br><br><br>
             <p class="h4 mb-4">Nuevo Producto</p>
 
 
@@ -185,17 +182,12 @@ if (isset($_POST["accion"]) && ($_POST["accion"] == "Agregar")) {
     <!-- Default form contact -->
 
 
-
-
-
-
 </body>
 <script>
     function eliminarProducto() {
         document.getElementById('forma').submit();
-       
-    }
 
+    }
 </script>
 
 
